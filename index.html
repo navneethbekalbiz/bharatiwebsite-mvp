@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bharathi Builders | The Art of Living</title>
+    
+    <!-- Fonts: Playfair Display, Lato, Bodoni Moda (High Contrast Serif), Montserrat (Geometric Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Lato:wght@300;400;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              midnight: '#0B0D10', // Darker, colder black
+              charcoal: '#1A1A1A',
+              gold: '#D4AF37', // True Metallic Gold
+              goldLight: '#F3E5AB', // Champagne
+              silver: '#E2E8F0',
+              offWhite: '#FAFAF9', // Warm white
+              greyText: '#9CA3AF',
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'], 
+              sans: ['"Lato"', 'sans-serif'],
+              // New Hero Fonts
+              bodoni: ['"Bodoni Moda"', 'serif'],
+              montserrat: ['"Montserrat"', 'sans-serif'],
+            },
+            letterSpacing: {
+              'tightest': '-0.05em',
+              'tighter': '-0.02em',
+              'lux': '0.2em',
+              'mega': '0.4em',
+            },
+            lineHeight: {
+              'loose-p': '1.9',
+            },
+            animation: {
+              'fade-in': 'fadeIn 1.5s ease-out forwards',
+              'spin-slow': 'spin 12s linear infinite',
+            },
+            backgroundImage: {
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0B0D10;
+        color: #FAFAF9;
+        cursor: none; 
+        overflow-x: hidden;
+        font-family: 'Lato', sans-serif; /* Default body font */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+      }
+
+      /* Specific override for new hero typography to ensure correct rendering */
+      .hero-serif {
+        font-family: 'Bodoni Moda', serif;
+      }
+      .hero-sans {
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      ::selection {
+        background-color: #D4AF37;
+        color: #0B0D10;
+      }
+
+      /* Custom Cursor Styles */
+      .cursor-dot,
+      .cursor-outline {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        z-index: 9999;
+        pointer-events: none;
+      }
+
+      .cursor-dot {
+        width: 6px;
+        height: 6px;
+        background-color: #D4AF37;
+      }
+
+      .cursor-outline {
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        transition: width 0.2s, height 0.2s, background-color 0.2s, border-color 0.2s;
+      }
+
+      body.hovering .cursor-outline {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(212, 175, 55, 0.05);
+        border-color: #D4AF37;
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0B0D10; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #D4AF37;
+      }
+      
+      /* Utilities */
+      .text-balance {
+        text-wrap: balance;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "clsx": "https://esm.sh/clsx@^2.1.1",
+    "tailwind-merge": "https://esm.sh/tailwind-merge@^2.5.5"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
